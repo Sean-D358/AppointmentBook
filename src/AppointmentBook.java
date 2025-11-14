@@ -24,9 +24,15 @@ public class AppointmentBook {
             if (isMinuteFree(period, i)) {
                 block++;
                 if (block == duration) return i - duration + 1;
-            } else block = 0;
+            }
+            else block = 0;
         }
         return -1;
     }
-    a.findFreeBlock(2, 15)
+    public void reserveBlock(int period, int startMinute, int duration) {
+        for(int i = startMinute; i < startMinute + duration; i++)
+            schedule[period - 1][i] = false;
+
+    }
+
 }
