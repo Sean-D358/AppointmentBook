@@ -28,4 +28,5 @@ public class AppointmentBook {
         }
         return -1;
     }
+    a.findFreeBlock(2, 15)
 }
